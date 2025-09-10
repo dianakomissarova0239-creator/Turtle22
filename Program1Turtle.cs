@@ -14,21 +14,30 @@ namespace Turtle22
         /// </summary>
         static void Main1()
         {
-            Turtle t1 = new Turtle();
+            Turtle t = new Turtle();
 
             //t1.MoveBackward(200);
-            t1.SetDelay(200);
-            t1.TailDown();
+            t.SetDelay(20);
+            t.TailDown();
+            Double step = 100 * 2 * Math.PI / 36;
+            for (int i = 0; i < 36; i++)
+            {
+                t.MoveForward(step);
+                t.TurnRight(10);
+           
+           
 
-            t1.MoveForward(50);
-            t1.TurnRight(90);
-            t1.MoveForward(100);
-            t1.TurnLeft(90);
+            }
+            t.TurnRight(180);
+            t.MoveForward(100-step/2);
+            t.TurnRight(180);
+            //t.MoveForward(100);
+            for (int i = 0; i < 4; i++)
+            {
+                t.MoveForward(200);
+                t.TurnRight(90);
+            }
 
-            t1.MoveForward(50);
-            t1.TurnRight(90);
-            t1.MoveForward(100);
-            t1.TurnLeft(90);
-        } 
+        }
     }
 }
